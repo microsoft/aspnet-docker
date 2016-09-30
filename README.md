@@ -11,7 +11,7 @@ NOTE: This is a Windows container image. [Learn more about Windows containers](h
 This image is built from the [microsoft/aspnet-docker GitHub repo](https://github.com/microsoft/aspnet-docker).
 
 ## What is ASP.NET?
-ASP.NET is a unified Web development model that includes the services necessary for you to build enterprise-class Web applications with a minimum of coding.
+ASP.NET is a high productivity  framework for building Web Applications using Web Forms, MVC, Web API and SignalR.
 
 ## How to use this image?
 ### Create a Dockerfile with your website
