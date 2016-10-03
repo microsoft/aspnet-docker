@@ -26,12 +26,12 @@ RUN powershell -NoProfile -Command \
 
 EXPOSE 8000
 
-ADD content/ /aspnet
+ADD . /aspnet
 ```
 You can then build and run the Docker image:
 ```
 $ docker build -t iis-site .
-$ docker run -d -p 8000:8000 --rm --name my-running-site iis-site
+$ docker run -d -p 8000:8000 --name my-running-site iis-site
 ```
 
 There is no need to specify an `ENTRYPOINT` in your Dockerfile since the `microsoft/aspnet` base image already includes an entrypoint application that monitors the status of the IIS World Wide Web Publishing Service (W3SVC).
