@@ -36,6 +36,31 @@ $ docker run -d -p 8000:8000 --name my-running-site iis-site
 
 There is no need to specify an `ENTRYPOINT` in your Dockerfile since the `microsoft/aspnet` base image already includes an entrypoint application that monitors the status of the IIS World Wide Web Publishing Service (W3SVC).
 
+### Verify in the browser
+
+> With the current release, you can't use `http://localhost` to browse your site from the container host. This is because of a known behavior in WinNAT, and will be resolved in future. Until that is addressed, you need to use the IP address of the container.
+
+Once the container starts, you'll need to finds its IP address so that you can connect to your running container from a browser. You use the `docker exec` command to do that:
+
+`docker exec my-running-site ipconfig`
+
+You will see an output similar to this:
+
+```
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet 2:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::91d:ce97:dd27:460d%5
+   IPv4 Address. . . . . . . . . . . : 172.31.194.61
+   Subnet Mask . . . . . . . . . . . : 255.240.0.0
+   Default Gateway . . . . . . . . . : 172.16.0.1
+```
+
+You can connect the running container using the IP address and configured port, `http://172.31.194.61:8000` in the example shown. 
+
 ## Supported Docker Versions
 This image has been tested on Docker Versions 1.12.1-beta26 or higher.
 
