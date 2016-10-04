@@ -59,7 +59,9 @@ Ethernet adapter Ethernet 2:
    Default Gateway . . . . . . . . . : 172.16.0.1
 ```
 
-You can connect the running container using the IP address and configured port, `http://172.31.194.61:8000` in the example shown. 
+You can connect the running container using the IP address and configured port, `http://172.31.194.61:8000` in the example shown.
+
+For a comprehensive tutorial on running an ASP.NET app in a container, check out [the tutorial on the docs site](https://docs.microsoft.com/en-us/dotnet/articles/framework/docker/aspnetmvc).
 
 ## Supported Docker Versions
 This image has been tested on Docker Versions 1.12.1-beta26 or higher.
