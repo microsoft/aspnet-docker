@@ -14,24 +14,11 @@ This image is built from the [microsoft/aspnet-docker GitHub repo](https://githu
 ASP.NET is a high productivity  framework for building Web Applications using Web Forms, MVC, Web API and SignalR.
 
 ## How to use this image?
-### Create a Dockerfile with your website
+
+Copy `4.6.2\sample\Dockerfile` to your app directory. You would then be able to build and run the site from the app directory.
+
 ```
-FROM microsoft/aspnet
-
-RUN mkdir C:\aspnet
-
-RUN powershell -NoProfile -Command \
-    Import-module IISAdministration; \
-    New-IISSite -Name "ASPNET" -PhysicalPath C:\aspnet -BindingInformation "*:8000:"
-
-EXPOSE 8000
-
-ADD . /aspnet
-```
-You can then build and run the Docker image:
-```
-$ docker build -t iis-site .
-$ docker run -d -p 8000:8000 --name my-running-site iis-site
+$ docker run -d --name my-running-site aspnet-site
 ```
 
 There is no need to specify an `ENTRYPOINT` in your Dockerfile since the `microsoft/aspnet` base image already includes an entrypoint application that monitors the status of the IIS World Wide Web Publishing Service (W3SVC).
@@ -50,12 +37,12 @@ You will see an output similar to this:
 172.28.103.186
 ```
 
-You can connect the running container using the IP address and configured port, `http://172.28.103.186:8000` in the example shown.
+You can connect the running container using the IP address and configured port, `http://172.28.103.186` in the example shown.
 
 For a comprehensive tutorial on running an ASP.NET app in a container, check out [the tutorial on the docs site](https://docs.microsoft.com/en-us/dotnet/articles/framework/docker/aspnetmvc).
 
 ## Supported Docker Versions
-This image has been tested on Docker Versions 1.12.1-beta26 or higher.
+This image has been tested on Docker Versions [1.12.2-beta](https://download.docker.com/components/engine/windows-server/cs-1.12/docker-1.12.2.zip) or higher.
 
 ## License of this repository
 
