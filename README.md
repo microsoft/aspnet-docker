@@ -1,24 +1,32 @@
-![ASP.NET Docker Image](https://avatars2.githubusercontent.com/u/6154722?v=3&s=200)
-# ASP.NET Docker Image
+# Supported tags and respective `Dockerfile` links
 
-NOTE: This is a Windows container image. [Learn more about Windows containers](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview).
+- [`4.6.2-windowsservercore-10.0.14393.321`, `4.6.2-windowsservercore`, `4.6.2`, `latest` (*4.6.2/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
+- [`3.5` (*3.5/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5/Dockerfile)
 
-## Supported tags and respective `Dockerfile` links
+These images are updated via [pull requests to the `microsoft/aspnet-docker` GitHub repo](https://github.com/microsoft/aspnet-docker/pulls).
 
-* 4.6.2, latest ([4.6.2/Dockerfile](https://github.com/microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile))
-* 3.5 ([3.5/Dockerfile](https://github.com/microsoft/aspnet-docker/blob/master/3.5/Dockerfile))
+[![Downloads from Docker Hub](https://img.shields.io/docker/pulls/microsoft/aspnet.svg)](https://hub.docker.com/r/microsoft/aspnet)
+[![Stars on Docker Hub](https://img.shields.io/docker/stars/microsoft/aspnet.svg)](https://hub.docker.com/r/microsoft/aspnet)
 
-This image is built from the [microsoft/aspnet-docker GitHub repo](https://github.com/microsoft/aspnet-docker).
+# What is ASP.NET
 
-## What is ASP.NET?
-ASP.NET is a high productivity  framework for building Web Applications using Web Forms, MVC, Web API and SignalR.
+ASP.NET is a high productivity framework for building Web Applications using Web Forms, MVC, Web API and SignalR.
 
-## How to use this image?
+This repository contains `Dockerfile` definitions for ASP.NET Docker images. These images use the [IIS image](https://hub.docker.com/r/microsoft/iis/) as their base.
+
+This image contains:
+- Windows Server Core as the base OS
+- IIS 10 as Web Server
+- .NET Framework 4.6.2 (or 3.5)
+- .NET Extensibility for IIS
+
+# How to use these Images
 
 Copy `4.6.2\sample\Dockerfile` to your app directory. You would then be able to build and run the site from the app directory.
 
 ```
-$ docker run -d --name my-running-site aspnet-site
+$ docker build -t aspnet-site --build-arg site_root=/
+$ docker run -d -p 8000:80 --name my-running-site aspnet-site
 ```
 
 There is no need to specify an `ENTRYPOINT` in your Dockerfile since the `microsoft/aspnet` base image already includes an entrypoint application that monitors the status of the IIS World Wide Web Publishing Service (W3SVC).
@@ -41,19 +49,50 @@ You can connect the running container using the IP address and configured port, 
 
 For a comprehensive tutorial on running an ASP.NET app in a container, check out [the tutorial on the docs site](https://docs.microsoft.com/en-us/dotnet/articles/framework/docker/aspnetmvc).
 
-## Supported Docker Versions
-This image has been tested on Docker Versions [1.12.2-beta](https://download.docker.com/components/engine/windows-server/cs-1.12/docker-1.12.2.zip) or higher.
+## Image variants
 
-## License of this repository
+The `microsoft/aspnet` images come in different flavors, each designed for a specific use case.
 
-MIT
+### `4.6.2`
 
-## License of ASP.NET (.NET Framework) images on Dockerhub 
+This image is for ASP.NET application built for Framework 4.0 and later version. It is based on the [IIS Image](https://hub.docker.com/r/microsoft/iis/) and includes the .NET Framework and .NET 4.6.2 Extensibility for IIS.
+
+### `3.5`
+
+This image is for ASP.NET application built for Framework 3.5 and later version. It is based on the [IIS Image](https://hub.docker.com/r/microsoft/iis/) and includes the .NET Framework and .NET 3.5 Extensibility for IIS.
+
+# Related Repos
+
+See the following related repos for other application types:
+
+- [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) for ASP.NET Core applications.
+- [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) for .NET Core images.
+- [microsoft/dotnet-framework](https://hub.docker.com/r/microsoft/dotnet-framework/) for .NET Framework applications.
+
+# License
+
+View [license information](https://www.microsoft.com/net/dotnet_library_license.htm) for the software contained in this image. 
+
+Windows Container images are licensed per the Windows license:
 
 MICROSOFT SOFTWARE SUPPLEMENTAL LICENSE TERMS
 
 CONTAINER OS IMAGE
 
 Microsoft Corporation (or based on where you live, one of its affiliates) (referenced as “us,” “we,” or “Microsoft”) licenses this Container OS Image supplement to you (“Supplement”). You are licensed to use this Supplement in conjunction with the underlying host operating system software (“Host Software”) solely to assist running the containers feature in the Host Software. The Host Software license terms apply to your use of the Supplement. You may not use it if you do not have a license for the Host Software. You may use this Supplement with each validly licensed copy of the Host Software.
-## User Feedback
-If you have any issues or concerns, reach out to us through a [GitHub issue](https://github.com/Microsoft/aspnet-docker/issues/new).
+
+# Supported Docker versions
+
+This image is officially supported on Docker version 1.12.2.
+
+Please see [the Docker installation documentation](https://docs.docker.com/installation/) for details on how to upgrade your Docker daemon.
+
+# User Feedback
+
+## Issues
+
+If you have any problems with or questions about this image, please contact us through a [GitHub issue](https://github.com/microsoft/aspnet-docker/issues).
+
+## Documentation
+
+You can read [documentation for ASP.NET](https://asp.net/), including Docker usage in the [.NET docs](https://docs.microsoft.com/en-us/dotnet/articles/framework/docker/aspnetmvc). The docs are also [open source on GitHub](https://github.com/dotnet/core-docs). Contributions are welcome!
