@@ -1,5 +1,6 @@
 # Supported tags and respective `Dockerfile` links
 
+- [`4.7-windowsservercore-10.0.14393.321`, `4.7-windowsservercore`, `4.7`, `latest` (*4.7/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7/Dockerfile)
 - [`4.6.2-windowsservercore-10.0.14393.321`, `4.6.2-windowsservercore`, `4.6.2`, `latest` (*4.6.2/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 - [`3.5` (*3.5/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5/Dockerfile)
 
@@ -17,12 +18,12 @@ This repository contains `Dockerfile` definitions for ASP.NET Docker images. The
 This image contains:
 - Windows Server Core as the base OS
 - IIS 10 as Web Server
-- .NET Framework 4.6.2 (or 3.5)
+- .NET Framework (multiple versions available)
 - .NET Extensibility for IIS
 
 # How to use these Images
 
-Copy `4.6.2\sample\Dockerfile` to your app directory. You would then be able to build and run the site from the app directory.
+Copy `4.7\sample\Dockerfile` to your app directory. You would then be able to build and run the site from the app directory.
 
 ```
 $ docker build -t aspnet-site --build-arg site_root=/
@@ -53,21 +54,25 @@ For a comprehensive tutorial on running an ASP.NET app in a container, check out
 
 The `microsoft/aspnet` images come in different flavors, each designed for a specific use case.
 
+### `4.7`
+
+This image is for ASP.NET applications built for the .NET Framework 4.0 and later versions. It is based on the [dotnet-framework:4.7](https://hub.docker.com/r/microsoft/dotnet-framework/) image and includes .NET Framework Extensibility for IIS.
+
 ### `4.6.2`
 
-This image is for ASP.NET application built for Framework 4.0 and later version. It is based on the [IIS Image](https://hub.docker.com/r/microsoft/iis/) and includes the .NET Framework and .NET 4.6.2 Extensibility for IIS.
+This image is for ASP.NET applications built for the .NET Framework 4.6.2. It is based on the [dotnet-framework:4.6.2](https://hub.docker.com/r/microsoft/dotnet-framework/) image and includes .NET Framework Extensibility for IIS.
 
 ### `3.5`
 
-This image is for ASP.NET application built for Framework 3.5 and later version. It is based on the [IIS Image](https://hub.docker.com/r/microsoft/iis/) and includes the .NET Framework and .NET 3.5 Extensibility for IIS.
+This image is for ASP.NET applications built for the .NET Framework 3.5. It is based on the [dotnet-framework:3.5](https://hub.docker.com/r/microsoft/dotnet-framework/) image and includes .NET Framework Extensibility for IIS.
 
 # Related Repos
 
 See the following related repos for other application types:
 
+- [microsoft/dotnet-framework](https://hub.docker.com/r/microsoft/dotnet-framework/) for .NET Framework applications.
 - [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) for ASP.NET Core applications.
 - [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) for .NET Core images.
-- [microsoft/dotnet-framework](https://hub.docker.com/r/microsoft/dotnet-framework/) for .NET Framework applications.
 
 # License
 
@@ -95,4 +100,6 @@ If you have any problems with or questions about this image, please contact us t
 
 ## Documentation
 
-You can read [documentation for ASP.NET](https://asp.net/), including Docker usage in the [.NET docs](https://docs.microsoft.com/en-us/dotnet/articles/framework/docker/aspnetmvc). The docs are also [open source on GitHub](https://github.com/dotnet/core-docs). Contributions are welcome!
+You can read [documentation for ASP.NET](https://docs.microsoft.com/aspnet/overview), including Docker usage in the [.NET docs](https://docs.microsoft.com/dotnet/framework/docker/aspnetmvc). 
+
+The docs are also [open source on GitHub](https://github.com/dotnet/docs). Contributions are welcome!
