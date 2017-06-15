@@ -1,8 +1,8 @@
 # Supported tags and respective `Dockerfile` links
 
-- [`4.7-windowsservercore-10.0.14393.321`, `4.7-windowsservercore`, `4.7`, `latest` (*4.7/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7/Dockerfile)
-- [`4.6.2-windowsservercore-10.0.14393.321`, `4.6.2-windowsservercore`, `4.6.2`, `latest` (*4.6.2/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
-- [`3.5` (*3.5/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5/Dockerfile)
+- [`4.7-windowsservercore-10.0.14393.1358`, `4.7-windowsservercore`, `4.7`, `latest` (*4.7/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7/Dockerfile)
+- [`4.6.2-windowsservercore-10.0.14393.1358`, `4.6.2-windowsservercore`, `4.6.2`, `latest` (*4.6.2/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
+- [`3.5-windowsservercore-10.0.14393.1358`,`3.5-windowsservercore`, `3.5` (*3.5/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5/Dockerfile)
 
 These images are updated via [pull requests to the `microsoft/aspnet-docker` GitHub repo](https://github.com/microsoft/aspnet-docker/pulls).
 
