@@ -26,7 +26,7 @@ This image contains:
 Copy `4.7\sample\Dockerfile` to your app directory. You would then be able to build and run the site from the app directory.
 
 ```
-$ docker build -t aspnet-site --build-arg site_root=/
+$ docker build -t aspnet-site --build-arg site_root=/ .
 $ docker run -d -p 8000:80 --name my-running-site aspnet-site
 ```
 
