@@ -9,6 +9,9 @@ RUN Add-WindowsFeature Web-Server; \
 
 ADD ServiceMonitor.exe /
 
+ADD ConfigureRoslynCompilers.ps1 .
+RUN powershell .\ConfigureRoslynCompilers.ps1
+
 EXPOSE 80
 
 ENTRYPOINT ["C:\\ServiceMonitor.exe", "w3svc"]
