@@ -5,6 +5,13 @@ $nugetUrl = "https://api.nuget.org/packages/"
 $roslynInstalledLocation = Join-Path ([Environment]::GetEnvironmentVariable("SystemDrive")) "RoslynCompilers"
 $roslynDownloadLocation = Join-Path ([IO.Path]::GetTempPath()) $roslynNupkgName
 
+if(Test-Path $roslynDownloadLocation){
+    Remove-Item $roslynDownloadLocation -Force
+}
+if(Test-Path $roslynInstalledLocation){
+    Remove-Item $roslynInstalledLocation -Recurse -Force
+}
+
 #download and unzip Roslyn nupkg
 Invoke-WebRequest "$nugetUrl$roslynNupkgName" -OutFile $roslynDownloadLocation
 [System.IO.Compression.ZipFile]::ExtractToDirectory($roslynDownloadLocation, $roslynInstalledLocation)
