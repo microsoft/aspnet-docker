@@ -1,4 +1,4 @@
-FROM microsoft/dotnet-framework:4.7
+FROM microsoft/dotnet-framework:4.6.2
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
@@ -8,6 +8,9 @@ RUN Add-WindowsFeature Web-Server; \
     Remove-Item -Recurse C:\inetpub\wwwroot\*
 
 ADD ServiceMonitor.exe /
+
+ADD ConfigureRoslynCompilers.ps1 .
+RUN powershell .\ConfigureRoslynCompilers.ps1
 
 EXPOSE 80
 
