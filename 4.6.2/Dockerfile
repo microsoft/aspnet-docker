@@ -9,24 +9,26 @@ RUN Add-WindowsFeature Web-Server; \
 
 ADD ServiceMonitor.exe /
 
-RUN powershell -Command \
+RUN \
 	#download and unzip Roslyn nupkg
-	wget  https://api.nuget.org/packages/microsoft.net.compilers.2.3.1.nupkg -OutFile c:\microsoft.net.compilers.2.3.1.zip ; \	
+	Invoke-WebRequest  https://api.nuget.org/packages/microsoft.net.compilers.2.3.1.nupkg -OutFile c:\microsoft.net.compilers.2.3.1.zip ; \	
 	Expand-Archive -Path c:\microsoft.net.compilers.2.3.1.zip -DestinationPath c:\RoslynCompilers ; \
+	Remove-Item c:\microsoft.net.compilers.2.3.1.zip -Force ; \
 
 	#ngen Roslyn binaries
-	start-Process C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe -ArgumentList 'install c:\RoslynCompilers\tools\csc.exe' -Wait ; \
-	start-Process C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe -ArgumentList 'install c:\RoslynCompilers\tools\vbc.exe' -Wait ; \
-	start-Process C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe -ArgumentList 'install c:\RoslynCompilers\tools\VBCSCompiler.exe' -Wait ; \
-	start-Process C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe -ArgumentList 'install c:\RoslynCompilers\tools\csc.exe' -Wait ; \
-	start-Process C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe -ArgumentList 'install c:\RoslynCompilers\tools\vbc.exe' -Wait ; \
-	start-Process C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe -ArgumentList 'install c:\RoslynCompilers\tools\VBCSCompiler.exe' -Wait ; \
+	& 'C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe' install c:\RoslynCompilers\tools\csc.exe /ExeConfig:c:\RoslynCompilers\tools\csc.exe ; \
+	if($LASTEXITCODE -ne 0){ Exit $LASTEXITCODE } ; \
+	& 'C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe' install c:\RoslynCompilers\tools\vbc.exe /ExeConfig:c:\RoslynCompilers\tools\vbc.exe  ; \
+	if($LASTEXITCODE -ne 0){ Exit $LASTEXITCODE } ; \
+	& 'C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe' install c:\RoslynCompilers\tools\VBCSCompiler.exe /ExeConfig:c:\RoslynCompilers\tools\VBCSCompiler.exe ; \
+	if($LASTEXITCODE -ne 0){ Exit $LASTEXITCODE } ; \
+	& 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe' install c:\RoslynCompilers\tools\csc.exe /ExeConfig:c:\RoslynCompilers\tools\csc.exe ; \
+	if($LASTEXITCODE -ne 0){ Exit $LASTEXITCODE } ; \
+	& 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe' install c:\RoslynCompilers\tools\vbc.exe /ExeConfig:c:\RoslynCompilers\tools\vbc.exe ; \
+	if($LASTEXITCODE -ne 0){ Exit $LASTEXITCODE } ; \
+	& 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\ngen.exe' install c:\RoslynCompilers\tools\VBCSCompiler.exe  /ExeConfig:c:\RoslynCompilers\tools\VBCSCompiler.exe ;
 
-	#Set environment variable for DotNetCompilerPlatform
-	[Environment]::SetEnvironmentVariable('ROSLYN_COMPILER_LOCATION', 'c:\RoslynCompilers\tools', 'Machine') ; \
-
-	remove-Item c:\microsoft.net.compilers.2.3.1.zip -Force
-
+ENV ROSLYN_COMPILER_LOCATION c:\\RoslynCompilers\\tools
 
 EXPOSE 80
 
