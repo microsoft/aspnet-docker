@@ -1,4 +1,4 @@
-FROM microsoft/dotnet-framework:3.5-windowsservercore-1709
+FROM microsoft/dotnet-framework:3.5-windowsservercore-1709_KB4054517
 
 RUN powershell -Command Add-WindowsFeature Web-Server & \
     powershell -Command Add-WindowsFeature Web-Asp-Net & \

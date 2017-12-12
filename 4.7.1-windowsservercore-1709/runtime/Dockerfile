@@ -1,4 +1,4 @@
-FROM microsoft/dotnet-framework:4.7.1-windowsservercore-1709
+FROM microsoft/dotnet-framework:4.7.1-windowsservercore-1709_KB4054517
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 

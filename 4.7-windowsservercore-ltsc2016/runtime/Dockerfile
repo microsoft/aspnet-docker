@@ -1,4 +1,4 @@
-FROM microsoft/dotnet-framework:4.7
+FROM microsoft/dotnet-framework:4.7-windowsservercore-10.0.14393.1944
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
