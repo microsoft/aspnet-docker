@@ -1,4 +1,4 @@
-FROM microsoft/dotnet-framework:3.5
+FROM microsoft/dotnet-framework:3.5-windowsservercore-10.0.14393.1944
 
 RUN powershell -Command Add-WindowsFeature Web-Server & \
     powershell -Command Add-WindowsFeature Web-Asp-Net & \
