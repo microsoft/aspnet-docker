@@ -1,4 +1,6 @@
-FROM microsoft/dotnet-framework:4.6.2
+# escape=`
+
+FROM microsoft/dotnet-framework:4.6.2-windowsservercore-ltsc2016
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
@@ -7,7 +9,7 @@ RUN Add-WindowsFeature Web-Server; \
     Add-WindowsFeature Web-Asp-Net45; \
     Remove-Item -Recurse C:\inetpub\wwwroot\*
 
-ADD ServiceMonitor.exe /
+COPY ServiceMonitor.exe /
 
 #download Roslyn nupkg and ngen the compiler binaries
 RUN Invoke-WebRequest https://api.nuget.org/packages/microsoft.net.compilers.2.3.1.nupkg -OutFile c:\microsoft.net.compilers.2.3.1.zip ; \	

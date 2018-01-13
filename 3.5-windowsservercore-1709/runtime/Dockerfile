@@ -1,3 +1,5 @@
+# escape=`
+
 FROM microsoft/dotnet-framework:3.5-windowsservercore-1709
 
 RUN powershell -Command Add-WindowsFeature Web-Server & \
@@ -5,7 +7,7 @@ RUN powershell -Command Add-WindowsFeature Web-Server & \
     %windir%\System32\inetsrv\appcmd set apppool /apppool.name:DefaultAppPool /managedRuntimeVersion:v2.0 & \
     powershell -Command Remove-Item -Recurse C:\inetpub\wwwroot\*
 
-ADD ServiceMonitor.exe /
+COPY ServiceMonitor.exe /
 
 EXPOSE 80
 
