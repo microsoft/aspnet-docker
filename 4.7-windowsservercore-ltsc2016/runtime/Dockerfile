@@ -9,10 +9,9 @@ RUN Add-WindowsFeature Web-Server; `
     Add-WindowsFeature Web-Asp-Net45; `
     Remove-Item -Recurse C:\inetpub\wwwroot\*
 
-ADD ServiceMonitor.exe /
-
 #download Roslyn nupkg and ngen the compiler binaries
-RUN Invoke-WebRequest https://api.nuget.org/packages/microsoft.net.compilers.2.3.1.nupkg -OutFile c:\microsoft.net.compilers.2.3.1.zip ; `	
+RUN Invoke-WebRequest https://dotnetbinaries.blob.core.windows.net/servicemonitor/1342334/ServiceMonitor.exe -OutFile C:\ServiceMonitor.exe ; & `
+    Invoke-WebRequest https://api.nuget.org/packages/microsoft.net.compilers.2.3.1.nupkg -OutFile c:\microsoft.net.compilers.2.3.1.zip ; `	
     Expand-Archive -Path c:\microsoft.net.compilers.2.3.1.zip -DestinationPath c:\RoslynCompilers ; `
     Remove-Item c:\microsoft.net.compilers.2.3.1.zip -Force ; `
     &C:\Windows\Microsoft.NET\Framework64\v4.0.30319\ngen.exe install c:\RoslynCompilers\tools\csc.exe /ExeConfig:c:\RoslynCompilers\tools\csc.exe | `
