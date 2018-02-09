@@ -7,9 +7,8 @@ SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPref
 RUN Add-WindowsFeature Web-Server; `
     Add-WindowsFeature NET-Framework-45-ASPNET; `
     Add-WindowsFeature Web-Asp-Net45; `
-    Remove-Item -Recurse C:\inetpub\wwwroot\*
-
-ADD ServiceMonitor.exe /
+    Remove-Item -Recurse C:\inetpub\wwwroot\*; `
+    Invoke-WebRequest -Uri https://dotnetbinaries.blob.core.windows.net/servicemonitor/2.0.1.1/ServiceMonitor.exe -OutFile C:\ServiceMonitor.exe
 
 #download Roslyn nupkg and ngen the compiler binaries
 RUN Invoke-WebRequest https://api.nuget.org/packages/microsoft.net.compilers.2.3.1.nupkg -OutFile c:\microsoft.net.compilers.2.3.1.zip ; `	
