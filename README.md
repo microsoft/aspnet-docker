@@ -73,7 +73,7 @@ This image is for ASP.NET applications built for the .NET Framework 4.0 and late
 
 ### `4.7.1`, `4.7`, `4.6.2`
 
-These images are for ASP.NET applications that need a specific .NET Framework version and have not been tested with .NET Framework 4.7.2. They are based on the corresponding [dotnet-framework](https://hub.docker.com/r/microsoft/dotnet-framework/) images and includes .NET Framework Extensibility for IIS.
+These images are for ASP.NET applications that need a specific .NET Framework version and have not been tested with .NET Framework 4.7.2. They are based on the corresponding [dotnet-framework](https://hub.docker.com/r/microsoft/dotnet-framework/) images and include .NET Framework Extensibility for IIS.
 
 ### `3.5`
 
