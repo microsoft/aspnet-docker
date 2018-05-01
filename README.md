@@ -65,13 +65,15 @@ For a comprehensive tutorial on running an ASP.NET app in a container, check out
 
 The `microsoft/aspnet` images come in different flavors, each designed for a specific use case.
 
-### `4.7`
+### `4.7.2`
+
+This is the primary image. If you are unsure about what your needs are, you probably want to use this one.
 
 This image is for ASP.NET applications built for the .NET Framework 4.0 and later versions. It is based on the [dotnet-framework:4.7](https://hub.docker.com/r/microsoft/dotnet-framework/) image and includes .NET Framework Extensibility for IIS.
 
-### `4.6.2`
+### `4.7.1`, `4.7`, `4.6.2`
 
-This image is for ASP.NET applications built for the .NET Framework 4.6.2. It is based on the [dotnet-framework:4.6.2](https://hub.docker.com/r/microsoft/dotnet-framework/) image and includes .NET Framework Extensibility for IIS.
+These images are for ASP.NET applications that need a specific .NET Framework version and have not been tested with .NET Framework 4.7.2. They are based on the corresponding [dotnet-framework](https://hub.docker.com/r/microsoft/dotnet-framework/) images and includes .NET Framework Extensibility for IIS.
 
 ### `3.5`
 
