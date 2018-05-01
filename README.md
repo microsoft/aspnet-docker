@@ -1,4 +1,4 @@
-﻿# Supported Windows Server 2016 Version 1709 (Fall Creators Update) amd64 tags
+﻿# Supported Windows Server, version 1709 amd64 tags
 
 - [`4.7.2-windowsservercore-1709`, `4.7.2`, `latest` (*4.7.2-windowsservercore-1709/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-1709/runtime/Dockerfile)
 - [`4.7.1-windowsservercore-1709`, `4.7.1`, `latest` (*4.7.1-windowsservercore-1709/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-1709/runtime/Dockerfile)
