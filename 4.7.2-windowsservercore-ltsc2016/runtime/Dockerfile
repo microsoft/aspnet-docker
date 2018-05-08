@@ -4,8 +4,6 @@ FROM microsoft/dotnet-framework:4.7.2-runtime-windowsservercore-ltsc2016
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
-ENV COMPLUS_NGenProtectedProcess_FeatureEnabled 0 
-
 RUN Add-WindowsFeature Web-Server; `
     Add-WindowsFeature NET-Framework-45-ASPNET; `
     Add-WindowsFeature Web-Asp-Net45; `

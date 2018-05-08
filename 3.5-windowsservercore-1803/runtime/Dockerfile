@@ -1,6 +1,6 @@
 # escape=`
 
-FROM microsoft/dotnet-framework:3.5-windowsservercore-1803
+FROM microsoft/dotnet-framework:3.5-runtime-windowsservercore-1803
 
 RUN powershell -Command Add-WindowsFeature Web-Server & `
     powershell -Command Add-WindowsFeature Web-Asp-Net & `
