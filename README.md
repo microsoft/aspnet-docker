@@ -1,4 +1,9 @@
-﻿# Supported Windows Server, version 1709 amd64 tags
+﻿# Supported Windows Server, version 1803 amd64 tags
+
+- [`4.7.2-windowsservercore-1803`, `4.7.2`, `latest` (*4.7.2-windowsservercore-1803/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-1803/runtime/Dockerfile)
+- [`3.5-windowsservercore-1803`, `3.5` (*3.5-windowsservercore-1803/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5-windowsservercore-1803/runtime/Dockerfile)
+
+# Supported Windows Server, version 1709 amd64 tags
 
 - [`4.7.2-windowsservercore-1709`, `4.7.2`, `latest` (*4.7.2-windowsservercore-1709/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-1709/runtime/Dockerfile)
 - [`4.7.1-windowsservercore-1709`, `4.7.1` (*4.7.1-windowsservercore-1709/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-1709/runtime/Dockerfile)
