@@ -1,36 +1,58 @@
 ﻿# Supported Windows Server 2019 amd64 tags
 
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2019`
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2019`
+
 - [`4.7.2-windowsservercore-ltsc2019`, `4.7.2`, `latest` (*4.7.2-windowsservercore-ltsc2019/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2019/runtime/Dockerfile)
-- `docker pull mcr.microsoft. com/dotnet/framework/aspnet:3.5-windowsservercore-ltsc2019`
+
+ `docker pull mcr.microsoft. com/dotnet/framework/aspnet:3.5-windowsservercore-ltsc2019`
+
 - [`3.5-windowsservercore-ltsc2019`, `3.5`, `latest` (*3.5-windowsservercore-ltsc2019/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5-windowsservercore-ltsc2019/runtime/Dockerfile)
 
 # Windows Server, version 1803 amd64 tags
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-1803`
+
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-1803`
+
 - [`4.7.2-windowsservercore-1803`, `4.7.2`, `latest` (*4.7.2-windowsservercore-1803/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-1803/runtime/Dockerfile)
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:3.5-windowsservercore-1803`
+
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:3.5-windowsservercore-1803`
+
 - [`3.5-windowsservercore-1803`, `3.5` (*3.5-windowsservercore-1803/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5-windowsservercore-1803/runtime/Dockerfile)
 
 # Windows Server, version 1709 amd64 tags
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-1709`
+
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-1709`
+
 - [`4.7.2-windowsservercore-1709`, `4.7.2`, `latest` (*4.7.2-windowsservercore-1709/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-1709/runtime/Dockerfile)
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.1-windowsservercore-1709`
-- [`4.7.1-windowsservercore-1709`, `4.7.1` (*4.7.1-windowsservercore-1709/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-1709/runtime/Dockerfile)
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:3.5-windowsservercore-1709`
-- [`3.5-windowsservercore-1709`, `3.5` (*3.5-windowsservercore-1709/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5-windowsservercore-1709/runtime/Dockerfile)
+
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.1-windowsservercore-1709`
+
+ [`4.7.1-windowsservercore-1709`, `4.7.1` (*4.7.1-windowsservercore-1709/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-1709/runtime/Dockerfile)
+
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:3.5-windowsservercore-1709`
+
+ [`3.5-windowsservercore-1709`, `3.5` (*3.5-windowsservercore-1709/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5-windowsservercore-1709/runtime/Dockerfile)
 
 # Windows Server 2016 amd64 tags
 
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2016`
-- [`4.7.2-windowsservercore-ltsc2016`, `4.7.2`, `latest` (*4.7.2-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2016/runtime/Dockerfile)
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.1-windowsservercore-ltsc2016`
-- [`4.7.1-windowsservercore-ltsc2016`, `4.7.1` (*4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7-windowsservercore-ltsc2016`
-- [`4.7-windowsservercore-ltsc2016`, `4.7` (*4.7-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7-windowsservercore-ltsc2016/runtime/Dockerfile)
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.6.2-windowsservercore-ltsc2016`
-- [`4.6.2-windowsservercore-ltsc2016`, `4.6.2` (*4.6.2-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2-windowsservercore-ltsc2016/runtime/Dockerfile)
-- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:3.5-windowsservercore-ltsc2016`
-- [`3.5-windowsservercore-ltsc2016`, `3.5` (*3.5-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5-windowsservercore-ltsc2016/runtime/Dockerfile)
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2016`
+
+ [`4.7.2-windowsservercore-ltsc2016`, `4.7.2`, `latest` (*4.7.2-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2016/runtime/Dockerfile)
+
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.1-windowsservercore-ltsc2016`
+
+ [`4.7.1-windowsservercore-ltsc2016`, `4.7.1` (*4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7-windowsservercore-ltsc2016`
+
+ [`4.7-windowsservercore-ltsc2016`, `4.7` (*4.7-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7-windowsservercore-ltsc2016/runtime/Dockerfile)
+
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.6.2-windowsservercore-ltsc2016`
+
+ [`4.6.2-windowsservercore-ltsc2016`, `4.6.2` (*4.6.2-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2-windowsservercore-ltsc2016/runtime/Dockerfile)
+
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:3.5-windowsservercore-ltsc2016`
+
+ [`3.5-windowsservercore-ltsc2016`, `3.5` (*3.5-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5-windowsservercore-ltsc2016/runtime/Dockerfile)
 
 
 >**Note:** Multi-arch tags, such as 4.7.1, have been updated to use windowsservercore-1709 images if your host is Windows Server 1709 or higher or Windows 10 Fall Creators Update (Version 1709) or higher. You need Docker 17.10 or later to take advantage of these updated tags.
