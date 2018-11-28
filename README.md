@@ -147,7 +147,28 @@ This image is officially supported on Docker version 1.12.2.
 
 Please see [the Docker installation documentation](https://docs.docker.com/installation/) for details on how to upgrade your Docker daemon.
 
+
 # User Feedback
+
+
+## Notes on ASP.NET container images for Windows Server 2019
+
+Now that [Windows Server 2019 is generally available](https://cloudblogs.microsoft.com/windowsserver/2018/11/13/update-on-windows-server-2019-availability/), we have published ASP.NET container images for Windows Server 2019.  You can pull the new Windows Server Image via-
+```
+docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2019
+```
+As you may have noticed in the `docker pull` command, the image is now being served from the Microsoft Container Registry (MCR). Starting with Windows Server 2019 and going forwards, all new tags will be published exclusively to MCR. All existing tags have been syndicated from DockerHub to MCR.
+If your existing Dockerfile begins by specifying microsoft/iis as the base layer as shown below- 
+```
+FROM microsoft/aspnet:4.7.2-windowsservercore-ltsc2016
+…
+```
+Our guidance is to move to adopting MCR as your base layer. You should change your Dockerfile to what’s shown below- 
+```
+FROM mcr.microsoft.com/windows/servercore/aspnet:4.7.2-windowsservercore-ltsc2019
+…
+```
+As part of this transition, we are only changing the source from where you download your images to MCR. DockerHub continues to be the preferred medium for container image discovery. I encourage taking a look a [Steve Lasker’s blog post](https://azure.microsoft.com/en-us/blog/microsoft-syndicates-container-catalog/) taking about the value proposition we can offer our customers through MCR.
 
 ## Issues
 
