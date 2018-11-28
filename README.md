@@ -158,14 +158,14 @@ Now that [Windows Server 2019 is generally available](https://cloudblogs.microso
 docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2019
 ```
 As you may have noticed in the `docker pull` command, the image is now being served from the Microsoft Container Registry (MCR). Starting with Windows Server 2019 and going forwards, all new tags will be published exclusively to MCR. All existing tags have been syndicated from DockerHub to MCR.
-If your existing Dockerfile begins by specifying microsoft/iis as the base layer as shown below- 
+If your existing Dockerfile begins by specifying microsoft/aspnet as the base layer as shown below- 
 ```
 FROM microsoft/aspnet:4.7.2-windowsservercore-ltsc2016
 …
 ```
 Our guidance is to move to adopting MCR as your base layer. You should change your Dockerfile to what’s shown below- 
 ```
-FROM mcr.microsoft.com/windows/servercore/aspnet:4.7.2-windowsservercore-ltsc2019
+FROM mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2016
 …
 ```
 As part of this transition, we are only changing the source from where you download your images to MCR. DockerHub continues to be the preferred medium for container image discovery. I encourage taking a look a [Steve Lasker’s blog post](https://azure.microsoft.com/en-us/blog/microsoft-syndicates-container-catalog/) taking about the value proposition we can offer our customers through MCR.
