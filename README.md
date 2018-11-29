@@ -168,7 +168,7 @@ Our guidance is to move to adopting MCR as your base layer. You should change yo
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2016
 …
 ```
-As part of this transition, we are only changing the source from where you download your images to MCR. DockerHub continues to be the preferred medium for container image discovery. I encourage taking a look a [Steve Lasker’s blog post](https://azure.microsoft.com/en-us/blog/microsoft-syndicates-container-catalog/) taking about the value proposition we can offer our customers through MCR.
+As part of this transition, we are only changing the source from where you download your images to MCR. DockerHub continues to be the preferred medium for container image discovery.  The Microsoft Container Registry does not have its own catalog experience and is meant to support existing catalogs such as Docker Hub, Red Hat Container Catalog, and Azure Marketplace.  This syndication model, enabling multiple channels of discovery, with a single download source for Microsoft’s container images.
 
 ## Issues
 
