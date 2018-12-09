@@ -4,7 +4,7 @@
 
 - [`4.7.2-windowsservercore-ltsc2019`, `4.7.2`, `latest` (*4.7.2-windowsservercore-ltsc2019/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2019/runtime/Dockerfile)
 
- `docker pull mcr.microsoft. com/dotnet/framework/aspnet:3.5-windowsservercore-ltsc2019`
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:3.5-windowsservercore-ltsc2019`
 
 - [`3.5-windowsservercore-ltsc2019`, `3.5`, `latest` (*3.5-windowsservercore-ltsc2019/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/3.5-windowsservercore-ltsc2019/runtime/Dockerfile)
 
