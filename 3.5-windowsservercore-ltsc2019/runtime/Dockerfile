@@ -1,6 +1,6 @@
 # escape=`
 
-FROM microsoft/dotnet-framework:3.5-runtime-windowsservercore-ltsc2019
+FROM mcr.microsoft.com/dotnet/framework/runtime:3.5-windowsservercore-ltsc2019
 
 RUN powershell -Command Add-WindowsFeature Web-Server & `
     powershell -Command Add-WindowsFeature Web-Asp-Net & `
