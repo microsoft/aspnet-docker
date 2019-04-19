@@ -1,8 +1,10 @@
 ﻿# Supported Windows Server 2019 amd64 tags
 
- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2019`
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019`
 
-- [`4.7.2-windowsservercore-ltsc2019`, `4.7.2`, `latest` (*4.7.2-windowsservercore-ltsc2019/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2019/runtime/Dockerfile)
+- [`4.8-windowsservercore-ltsc2019`, `4.8`, `latest` (*4.8-windowsservercore-ltsc2019/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2019/runtime/Dockerfile)
+
+- [`4.7.2-windowsservercore-ltsc2019`, `4.7.2` (*4.7.2-windowsservercore-ltsc2019/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2019/runtime/Dockerfile)
 
  `docker pull mcr.microsoft.com/dotnet/framework/aspnet:3.5-windowsservercore-ltsc2019`
 
@@ -10,9 +12,11 @@
 
 # Windows Server, version 1803 amd64 tags
 
- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-1803`
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-1803`
 
-- [`4.7.2-windowsservercore-1803`, `4.7.2`, `latest` (*4.7.2-windowsservercore-1803/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-1803/runtime/Dockerfile)
+- [`4.8-windowsservercore-1803`, `4.8`, `latest` (*4.8-windowsservercore-1803/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-1803/runtime/Dockerfile)
+
+- [`4.7.2-windowsservercore-1803`, `4.7.2` (*4.7.2-windowsservercore-1803/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-1803/runtime/Dockerfile)
 
  `docker pull mcr.microsoft.com/dotnet/framework/aspnet:3.5-windowsservercore-1803`
 
@@ -34,9 +38,11 @@
 
 # Windows Server 2016 amd64 tags
 
- `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.2-windowsservercore-ltsc2016`
+ `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2016`
 
- [`4.7.2-windowsservercore-ltsc2016`, `4.7.2`, `latest` (*4.7.2-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2016/runtime/Dockerfile)
+ [`4.8-windowsservercore-ltsc2016`, `4.8`, `latest` (*4.8-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2016/runtime/Dockerfile)
+
+ [`4.7.2-windowsservercore-ltsc2016`, `4.7.2` (*4.7.2-windowsservercore-ltsc2016/runtime/Dockerfile*)](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.2-windowsservercore-ltsc2016/runtime/Dockerfile)
 
  `docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.7.1-windowsservercore-ltsc2016`
 
@@ -107,13 +113,13 @@ For a comprehensive tutorial on running an ASP.NET app in a container, check out
 
 The `microsoft/aspnet` images come in different flavors, each designed for a specific use case.
 
-### `4.7.2`
+### `4.8`
 
 This is the primary image. If you are unsure about what your needs are, you probably want to use this one.
 
-This image is for ASP.NET applications built for the .NET Framework 4.0 and later versions. It is based on the [dotnet-framework:4.7](https://hub.docker.com/r/microsoft/dotnet-framework/) image and includes .NET Framework Extensibility for IIS.
+This image is for ASP.NET applications built for the .NET Framework 4.0 and later versions. It is based on the [dotnet-framework:4.8](https://hub.docker.com/r/microsoft/dotnet-framework/) image and includes .NET Framework Extensibility for IIS.
 
-### `4.7.1`, `4.7`, `4.6.2`
+### `4.7.2`,  `4.7.1`, `4.7`, `4.6.2`
 
 These images are for ASP.NET applications that need a specific .NET Framework version and have not been tested with .NET Framework 4.7.2. They are based on the corresponding [dotnet-framework](https://hub.docker.com/r/microsoft/dotnet-framework/) images and include .NET Framework Extensibility for IIS.
 
